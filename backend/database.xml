@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+  <users>
+    <user>
+      <id>admin</id>
+      <name>System Admin</name>
+      <role>Admin</role>
+      <status>Active</status>
+    </user>
+    <user>
+      <id>101</id>
+      <name>Sarah Connor</name>
+      <role>General User</role>
+      <status>Active</status>
+    </user>
+    <user>
+      <id>102</id>
+      <name>Michael Chang</name>
+      <role>General User</role>
+      <status>Active</status>
+    </user>
+  </users>
+
+  <records>
+    <record>
+      <id>REC-01</id>
+      <title>OAuth 2.0 Integration</title>
+      <description>Implement SSO.</description>
+      <status>Completed</status>
+      <priority>High</priority>
+      <assignedTo>Security Team</assignedTo>
+      <date>May 10, 2026</date>
+    </record>
+    <record>
+      <id>REC-02</id>
+      <title>PostgreSQL Migration</title>
+      <description>Migrate DB.</description>
+      <status>Active</status>
+      <priority>High</priority>
+      <assignedTo>Database Team</assignedTo>
+      <date>May 21, 2026</date>
+    </record>
+    <record>
+      <id>REC-03</id>
+      <title>Redis Cache Implementation</title>
+      <description>Add cache.</description>
+      <status>Completed</status>
+      <priority>Medium</priority>
+      <assignedTo>Backend Team</assignedTo>
+      <date>May 12, 2026</date>
+    </record>
+    <record>
+      <id>REC-04</id>
+      <title>Kubernetes Cluster</title>
+      <description>Configure pods.</description>
+      <status>Active</status>
+      <priority>High</priority>
+      <assignedTo>DevOps Team</assignedTo>
+      <date>May 23, 2026</date>
+    </record>
+    <record>
+      <id>REC-05</id>
+      <title>Unit Test Coverage</title>
+      <description>Increase coverage.</description>
+      <status>Pending</status>
+      <priority>Low</priority>
+      <assignedTo>QA Team</assignedTo>
+      <date>May 25, 2026</date>
+    </record>
+    <record>
+      <id>REC-06</id>
+      <title>Admin Audit Log</title>
+      <description>Sensitive data.</description>
+      <status>Active</status>
+      <priority>High</priority>
+      <assignedTo>Admin</assignedTo>
+      <date>May 26, 2026</date>
+    </record>
+    <record>
+      <id>REC-07</id>
+      <title>Billing System</title>
+      <description>Financial update.</description>
+      <status>Pending</status>
+      <priority>High</priority>
+      <assignedTo>Admin</assignedTo>
+      <date>May 27, 2026</date>
+    </record>
+  </records>
+</database>
