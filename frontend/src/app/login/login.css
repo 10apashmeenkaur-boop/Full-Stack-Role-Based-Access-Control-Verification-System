@@ -1,0 +1,74 @@
+.split-layout { display: flex; min-height: 100vh; width: 100vw; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+.brand-side { flex: 1; background-color: #1e1b4b; color: white; padding: 8%; display: flex; flex-direction: column; justify-content: center; }
+.logo-icon { margin-bottom: 24px; }
+.brand-side h1 { font-size: 3rem; margin: 0 0 12px 0; font-weight: 700; letter-spacing: -0.02em; }
+.brand-subtitle { font-size: 1.25rem; font-weight: 400; opacity: 0.9; margin: 0; }
+.divider { height: 1px; background: rgba(255,255,255,0.2); margin: 40px 0; width: 100%; max-width: 400px; }
+.brand-side h3 { font-size: 1.1rem; margin: 0 0 12px 0; font-weight: 600; }
+.brand-side p { font-size: 0.95rem; opacity: 0.75; line-height: 1.6; max-width: 500px; }
+
+.form-side { flex: 1; background-color: #f8fafc; display: flex; align-items: center; justify-content: center; padding: 20px; }
+
+.login-card { 
+  width: 100%; 
+  max-width: 420px; 
+  background: white; 
+  padding: 48px 40px; 
+  border-radius: 12px; 
+  border: 1px solid #e2e8f0; 
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+}
+
+.signin-title { margin: 0 0 8px 0; font-size: 2rem; color: #0f172a; font-weight: 700; letter-spacing: -0.02em; }
+.subtitle { color: #64748b; margin-bottom: 40px; font-size: 14px; }
+
+.outline-input { position: relative; margin-bottom: 28px; }
+
+/* The white background here hides the border line passing through the text */
+.outline-input label { 
+  position: absolute; 
+  top: -9px; 
+  left: 12px; 
+  background: white; 
+  padding: 0 4px; 
+  font-size: 12px; 
+  font-weight: 600;
+  color: #64748b; 
+  z-index: 10;
+}
+
+.outline-input input, .outline-input select { 
+  width: 100%; 
+  box-sizing: border-box; 
+  padding: 14px 16px; 
+  border: 1px solid #cbd5e1; 
+  border-radius: 8px; 
+  font-size: 15px; 
+  color: #0f172a;
+  outline: none; 
+  background: transparent; 
+  transition: border-color 0.2s;
+}
+.outline-input input:focus, .outline-input select:focus { border-color: #3b82f6; }
+
+.password-wrapper { position: relative; display: flex; align-items: center; }
+.password-wrapper input { padding-right: 48px; }
+.eye-icon { position: absolute; right: 16px; cursor: pointer; display: flex; align-items: center; }
+
+.sign-in-btn { width: 100%; padding: 14px; background: #1e1b4b; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+.sign-in-btn:hover { background: #312e81; }
+
+.error-box { 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  background-color: #fef2f2; 
+  color: #dc2626; 
+  padding: 12px; 
+  border-radius: 8px; 
+  border: 1px solid #fecaca; 
+  font-size: 13px; 
+  font-weight: 600; 
+  margin-top: 20px; 
+}
+.error-box svg { margin-right: 8px; flex-shrink: 0; }

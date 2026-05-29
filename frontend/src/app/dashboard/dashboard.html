@@ -1,0 +1,61 @@
+<nav class="top-nav">
+  <div class="nav-content">
+    <div>
+      <h2 class="nav-title">{{ user?.name }} - {{ user?.role }}</h2>
+      <p class="nav-subtitle">Engineering | {{ user?.id }}@nsqtech.com</p>
+    </div>
+    <a href="/login" class="logout-btn">🚪 Logout</a>
+  </div>
+</nav>
+
+<div class="dashboard-wrapper">
+    <div class="stats-grid">
+    <div class="stat-card">
+      <h4>Total Tasks</h4>
+      <p>{{ records.length || 0 }}</p>
+    </div>
+    <div class="stat-card">
+      <h4>Action Required</h4>
+      <p style="color: #ea580c;">2</p>
+    </div>
+    <div class="stat-card">
+      <h4>System Status</h4>
+      <p style="color: #16a34a;">● Secure Connection</p>
+    </div>
+  </div>
+  <div class="table-card">
+    
+    <div class="card-header">
+      <div>
+        <h3 style="margin: 0; color: #1e293b;">User Records</h3>
+        <p style="margin: 5px 0 0 0; color: #64748b; font-size: 14px;">Standard access - viewing assigned records only</p>
+      </div>
+      <div class="record-badge">{{ records.length }} Total Records</div>
+    </div>
+
+    <div *ngIf="loading" class="loading-bar">
+      Loading records from server (simulating network delay)...
+    </div>
+
+    <table *ngIf="!loading">
+      <thead>
+        <tr>
+          <th>Record ID</th>
+          <th>Task Title</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let record of records">
+          <td style="font-weight: 500; color: #0f172a;">{{ record.id }}</td>
+          <td style="color: #475569;">{{ record.title }}</td>
+          <td>
+            <span class="status-pill" [class.active-pill]="record.status === 'Completed'">
+              {{ record.status }}
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
