@@ -147,7 +147,7 @@ export class AdminComponent implements OnInit {
   ngOnInit() { this.fetchUsers(); }
 
   async fetchUsers() {
-    const res = await fetch('http://localhost:3000/api/users');
+    const res = await fetch('https://full-stack-role-based-access-control-d1f8.onrender.com/api/users');
     this.users = await res.json();
     this.cdr.detectChanges();
   }
@@ -170,13 +170,13 @@ export class AdminComponent implements OnInit {
     }
     
     if (this.isEditing) {
-      await fetch(`http://localhost:3000/api/users/${id}`, {
+      await fetch(`https://full-stack-role-based-access-control-d1f8.onrender.com/api/users/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, role })
       });
     } else {
-      await fetch('http://localhost:3000/api/users', {
+      await fetch('https://full-stack-role-based-access-control-d1f8.onrender.com/api/users', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id, name, role })
@@ -189,7 +189,7 @@ export class AdminComponent implements OnInit {
 
   async deleteUser(id: string) {
     if(confirm(`Are you sure you want to delete user ${id}?`)) {
-      await fetch(`http://localhost:3000/api/users/${id}`, { method: 'DELETE' });
+      await fetch(`https://full-stack-role-based-access-control-d1f8.onrender.com/api/users/${id}`, { method: 'DELETE' });
       await this.fetchUsers();
     }
   }
