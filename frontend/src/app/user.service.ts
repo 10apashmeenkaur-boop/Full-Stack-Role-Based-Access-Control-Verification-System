@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserService {
-  private baseUrl = 'http://localhost:3000/api';
+  private baseUrl = 'https://full-stack-role-based-access-control-d1f8.onrender.com/api';
 
   // Fetch Users
   async getUsers() {
