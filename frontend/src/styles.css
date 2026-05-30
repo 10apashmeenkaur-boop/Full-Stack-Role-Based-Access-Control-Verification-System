@@ -5,3 +5,25 @@ body, html {
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   background-color: #f8fafc;
 }
+/* --- UNIVERSAL MOBILE RESPONSIVENESS FIX --- */
+@media screen and (max-width: 768px) {
+  /* 1. Login Page Fixes */
+  .split-layout { flex-direction: column; height: auto; min-height: 100vh; }
+  .brand-side { padding: 40px 20px; text-align: center; flex: none; width: auto; }
+  .form-side { padding: 20px; align-items: flex-start; width: auto; }
+  .login-card { padding: 30px 20px; box-shadow: none; border: none; }
+
+  /* 2. Dashboard & Admin Nav Fixes */
+  .top-nav { padding: 15px 20px; text-align: center; }
+  .nav-content { flex-direction: column; gap: 15px; }
+  .logout-btn { width: 100%; }
+  
+  /* 3. Dashboard Grid Fixes */
+  .dashboard-wrapper { padding: 20px 10px; }
+  .stats-grid { grid-template-columns: 1fr; gap: 15px; } /* Stacks the 3 cards vertically */
+  .card-header { flex-direction: column; gap: 15px; align-items: flex-start; }
+  
+  /* 4. Table Scroll Fix (Critical for mobile) */
+  .table-card { padding: 15px; overflow-x: auto; width: 100%; box-sizing: border-box; }
+  table { min-width: 600px; } /* Prevents table from squishing; allows horizontal scrolling */
+}
